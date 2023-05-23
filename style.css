@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap');
+:root{
+    --gap: 50px;
+}
+
+*{
+    font-family: 'Signika Negative', sans-serif;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container::before{
+    content: '';
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: calc(-1 * (100vh / 2));
+    background-color: red;
+
+}
+
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 40px;
+    min-width: 200px;
+    gap: 15px;
+    color: #000;
+    border: 16px solid #000;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: border-color .3s linear;
+}
+
+.card:before{
+    content: '';
+    height: var(--gap);
+}
+
+.hp{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.1rem;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #fff;
+    border: 2px solid #000;
+
+}
+
+.stats {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    gap: 20px;
+}
+
+.types{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.type{
+    padding: 10px 15px;
+    background-color: #fff;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.img-wrapper{
+    width: 100%;
+    background-color: transparent;
+    height: 200px;
+}
+
+.img-wrapper img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.name{
+    font-weight: 600;
+    text-align: center;
+    font-size: 2rem;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.stats{
+    margin: 5px 0;
+}
+
+.stat{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.1rem;
+    justify-content: center;
+}
+
+.get-btn{
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    background-color: #222;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: var(--gap);
+    transition: background-color .2s ease-in-out;
+}
+
+.get-btn:hover,
+.get-btn:focus{
+    background-color: #333;
+
+}
